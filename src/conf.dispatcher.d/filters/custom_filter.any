@@ -1,0 +1,3 @@
+#/0001 {/type "deny" /url "*"}
+/0002 {/type "allow" /url "/content/we-retail/*" /extension "html"}
+/0064 { /type "deny" /path "/content/we-retail/us/en/men"  /extension '(html|jsp|json|pdf)' }
