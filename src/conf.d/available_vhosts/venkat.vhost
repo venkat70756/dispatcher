@@ -1,0 +1,13 @@
+<VirtualHost *:80>
+    ServerName venkat.local
+
+    # Enable rewrite engine
+    RewriteEngine On
+
+    # Redirect all requests to the AEM page using RewriteRule
+    RewriteRule ^/(.*)$ http://vaikuntha.local/content/Vaikuntha/us/en.html [R=301,L]
+
+    # Alternative simple redirect method (currently disabled)
+    # Redirect 301 / http://vaikuntha.local/content/Vaikuntha/us/en.html
+
+</VirtualHost>

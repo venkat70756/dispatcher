@@ -1,0 +1,7 @@
+<VirtualHost *:80>
+    ServerName vaikuntha.local
+
+    <LocationMatch "^/">
+        ProxyPassMatch http://${AEM_HOST}:${AEM_PORT}
+    </LocationMatch>
+</VirtualHost>

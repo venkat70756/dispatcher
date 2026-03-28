@@ -1,0 +1,50 @@
+/ammu
+{
+  /clientheaders
+  {
+    "*"
+  }
+
+  /virtualhosts
+  {
+    "ammu.local"
+  }
+
+  /renders
+  {
+    /render1
+    {
+      /hostname "${AEM_HOST}"
+      /port "${AEM_PORT}"
+    }
+  }
+
+  /filter
+  {
+    /0000 { /type "allow" /url "*" }
+  }
+
+  /cache
+  {
+    /docroot "/mnt/var/www/html/ammu"
+
+    /rules
+    {
+      /0000 { /type "allow" /glob "*" }
+    }
+
+    /invalidate
+    {
+      /0000 { /type "allow" /glob "*" }
+    }
+
+    /allowedClients
+    {
+      /0000
+      {
+        /glob "*"
+        /type "allow"
+      }
+    }
+  }
+}
