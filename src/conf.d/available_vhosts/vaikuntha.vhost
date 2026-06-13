@@ -1,7 +1,16 @@
 <VirtualHost *:80>
+
     ServerName vaikuntha.local
 
+
+    DocumentRoot "/mnt/var/www/html"
+
+    <Directory "/mnt/var/www/html">
+        Require all granted
+    </Directory>
+
     <LocationMatch "^/">
-        ProxyPassMatch http://${AEM_HOST}:${AEM_PORT}
+        SetHandler dispatcher-handler
     </LocationMatch>
+
 </VirtualHost>
